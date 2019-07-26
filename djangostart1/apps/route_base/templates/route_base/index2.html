@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<a href="/demo/">跳转到demo</a>
+<a href="/route_base/index/">跳转到route_base_index</a>
+<a href="/route_resolve/index/">跳转到route_resolve_index</a>
+<br/>
+<a href="{% url 'demo' %}">跳转到demo</a>
+<a href="{% url 'route_base:index' %}">跳转到route_base_index</a>
+<a href="{% url 'route_resolve:index' %}">跳转到route_resolve_index</a>
+<a href="{% url 'route_base:zoos3' 10 %}">跳转到route_resolve_zoos3</a>
+<a href={% url 'demo_form11' %}>222</a>
+
+</body>
+</html>

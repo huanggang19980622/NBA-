@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>登录</title>
+    <link rel="shortcut icon" href="" type="image/x-icon">
+    <link rel="stylesheet" charset="utf-8" href="/static/css/reset.css">
+    <link rel="stylesheet" charset="utf-8" href="/static/css/reg.css">
+</head>
+<body>
+    <div class="login_header">
+        <div class="header_center clearfix">
+            <div class="myfl">
+                <a href="/"><img src="/static/img/laqu_logo.png"/></a>
+                <span>欢迎登陆</span>
+            </div>
+            <div class="myfr">
+                <a href="/">返回首页</a><span></span><a href="javascript:;" class="collection_web">收藏网站</a>
+            </div>
+        </div>
+    </div>
+    <div class="login_content clearfix">
+        <input type="hidden" id="memberType" value="" />
+        <form action="/login/" method="post" id="login_form">
+            <input type="hidden" name="memberType" id="parameter" value="1"/>
+            <div class="login_box myfr">
+                <p class="tabchange clearfix">
+                    <span class="myfl bor_bottom" id="usertype">用户登录</span>
+                </p>
+                <p class="system_error"></p>
+                <input type="text" name="username" value="" placeholder="手机号/用户名" id="username"/>
+                <p class="username_error"><span>用户名不能为空!</span></p>
+                <input type="password" placeholder="登录密码" id="password" name="password" maxlength="16" value=""/>
+                <p class="password_error"><span>密码不能为空!</span></p>
+                <p class="forget_password clearfix"><a href="" class="myfr">忘记密码？</a></p>
+{#                <input type="submit" value="立即登录" class="submit_btn">#}
+                <a href="javascript:;" class="submit_btn">立即登录</a>
+                <p class="entry_mode clearfix">
+                    <span class="myfl">你也可以用以下方式登录:</span>
+                    <a href="/register/" class="myfr">
+                        <em></em>
+                        <i>快速注册</i>
+                    </a>
+                </p>
+            </div>
+        </form>
+    </div>
+    <div class="login_bottom">Copright &nbsp;&nbsp;2017杭州bb科技有限公司 &nbsp;&nbsp;浙ICP17088888号-1 &nbsp;&nbsp;版权所有</div>
+</body>
+<script type="text/javascript" charset="utf-8" src="/static/js/jquery-3.2.1.min.js"></script>
+<script>
+    function checkform() {
+        return true;
+        UserName = $("#username");
+        UserName.next().children("span").css("display","inline-block");
+        UserName.next().children("span").text("用户名格式不正确！");
+    }
+    $('.submit_btn').click(function () {
+        if(checkform()){
+            $('#login_form').submit();
+        }
+    })
+</script>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

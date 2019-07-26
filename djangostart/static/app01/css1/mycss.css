@@ -1,0 +1,48 @@
+body{
+    position: relative;
+    margin: 10% 0 0 40%;
+}
+
+.a{
+    position: relative;
+    top: -54px;
+    left: 130px;
+}
+
+.b{
+    position: relative;
+    top: -33px;
+    left: 26px;
+}
+
+.c{
+    position: relative;
+    top: -16px;
+    left: 26px;
+}
+
+.d{
+    position: relative;
+    top:  -16px;
+    left: 26px;
+}
+
+.e{
+    width:304px;
+    height:40px;
+    border-radius:3px;
+    border-style:none;
+    background:#3F89EC;
+    font-size:16px;
+    font-weight: bolder;
+    color:#FFFFFF; 
+    position: relative;
+    left: 25px;
+    top: -35px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.e:hover{
+    background: #4490F7;
+}
