@@ -1,3 +1,0 @@
-"((css|js|img).*(jpg|png|css|js))"
-
-"/static/$1"
