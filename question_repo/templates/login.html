@@ -1,0 +1,84 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="Mosaddek">
+    <meta name="keyword" content="FlatLab, Dashboard, Bootstrap, Admin, Template, Theme, Responsive, Fluid, Retina">
+    <link rel="shortcut icon" href="http://127.0.0.1:8000/accounts/login/img/favicon.html">
+    <title>用户登录-三创题库系统</title>
+    <!-- Bootstrap core CSS -->
+    <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
+    <link href="{% static 'css/bootstrap-reset.css' %}" rel="stylesheet">
+    <!--external css-->
+    <link href="{% static 'assets/font-awesome/css/font-awesome.css' %}" rel="stylesheet" />
+    <!-- Custom styles for this template -->
+    <link href="{% static 'css/style.css' %}" rel="stylesheet">
+    <link href="{% static 'css/style-responsive.css' %}" rel="stylesheet" />
+    <script src="{% static 'js/jquery.js' %}"></script>
+</head>
+    <body class="login-body">
+        <div class="container">
+          <form class="form-signin" method="post">
+            {% csrf_token %}
+            <h2 class="form-signin-heading">登录</h2>
+            <div class="login-wrap">
+{#                {{ request.user }}#}
+{#                {{ DEFAULT_MESSAGE_LEVELS }}#}
+                {{ form.username}}
+                {{ form.password}}
+                {{ form.captcha}}
+                <a href="javascript:void(0);"><img id="captcha_img" src="#" ></a>
+                <div class="user-reg">
+                    <a href="{% url 'accounts:register' %}"> 用户注册</a>
+                    <span class="pull-right"> <a href=""> 忘记密码?</a></span>
+                </div>
+                <button class="btn btn-lg btn-login btn-block" type="submit">登录</button>
+                <p class="msg"></p>
+            </div>
+          </form>
+        </div>
+    <script>
+    get_captcha_img();
+    $("#captcha_img").click(get_captcha_img);
+
+    function get_captcha_img() {
+        $.ajax({
+            url: '{% url 'apis:get_captcha' %}',
+            type: 'GET',
+            dataType: 'text',
+            success: function (data) {
+                $('#captcha_img').attr('src', data);
+            }
+        });
+    }
+
+        // 这里在form中定义了，如果没定义可以用jquery添加事件
+    // $("#id_captcha").blur(check_captcha);
+
+    // 当失去焦点时检查验证码
+    function check_captcha() {
+        var captcha_code = $('#id_captcha').val();
+        if (captcha_code.length == 0){
+            return false
+        }
+        $.ajax({
+            url: '{% url 'apis:check_captcha' %}',
+            type: 'GET',
+            dataType: 'json',
+            data: {"captcha_code": captcha_code},
+            success: function (data) {
+                if(data.code == 400){
+                     $('.msg').html("验证码错误");
+                }else{
+                    $('.msg').html("");
+                }
+            }
+        });
+    };
+    </script>
+    </body>
+</html>
