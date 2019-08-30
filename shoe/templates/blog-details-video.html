@@ -1,4 +1,5 @@
-﻿<!doctype html>
+﻿{% load staticfiles %}
+<!doctype html>
 <html class="no-js" lang="en">
 
 <head>
@@ -9,26 +10,26 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <!-- Favicon -->
-    <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.ico">
+    <link rel="shortcut icon" type="image/x-icon" href="{% static 'img/favicon.ico'%}">
 
     <!-- CSS
 	============================================ -->
     <!-- google fonts -->
     <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:300,300i,400,400i,600,700,800,900%7CPoppins:300,400,500,600,700,800,900" rel="stylesheet">
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="assets/css/vendor/bootstrap.min.css">
+    <link rel="stylesheet" href="{% static 'css/vendor/bootstrap.min.css'%}">
     <!-- Font-awesome CSS -->
-    <link rel="stylesheet" href="assets/css/vendor/font-awesome.min.css">
+    <link rel="stylesheet" href="{% static 'css/vendor/font-awesome.min.css'%}">
     <!-- Slick slider css -->
-    <link rel="stylesheet" href="assets/css/plugins/slick.min.css">
+    <link rel="stylesheet" href="{% static 'css/plugins/slick.min.css'%}">
     <!-- animate css -->
-    <link rel="stylesheet" href="assets/css/plugins/animate.css">
+    <link rel="stylesheet" href="{% static 'css/plugins/animate.css'%}">
     <!-- Nice Select css -->
-    <link rel="stylesheet" href="assets/css/plugins/nice-select.css">
+    <link rel="stylesheet" href="{% static 'css/plugins/nice-select.css'%}">
     <!-- jquery UI css -->
-    <link rel="stylesheet" href="assets/css/plugins/jqueryui.min.css">
+    <link rel="stylesheet" href="{% static 'css/plugins/jqueryui.min.css'%}">
     <!-- main style css -->
-    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="{% static 'css/style.css'%}">
 
 </head>
 
@@ -45,11 +46,11 @@
                             <div class="top-left-navigation">
                                 <ul class="nav align-items-center">
                                     <li class="language">
-                                        <img src="assets/img/icon/en.png" alt="flag"> ENGLISH
+                                        <img src="{% static 'img/icon/en.png'%}" alt="flag"> ENGLISH
                                         <i class="fa fa-angle-down"></i>
                                         <ul class="dropdown-list">
-                                            <li><a href="#"><img src="assets/img/icon/en.png" alt="flag"> English</a></li>
-                                            <li><a href="#"><img src="assets/img/icon/fr.png" alt="flag"> French</a></li>
+                                            <li><a href="#"><img src="{% static 'img/icon/en.png'%}" alt="flag"> English</a></li>
+                                            <li><a href="#"><img src="{% static 'img/icon/fr.png'%}" alt="flag"> French</a></li>
                                         </ul>
                                     </li>
                                     <li class="curreny-wrap">
@@ -71,7 +72,7 @@
                                 <a href="#"><i class="fa fa-pinterest"></i></a>
                             </div>
                             <ul class="user-info-block">
-                                <li><a href="my-account.html"><i class="fa fa-user-circle"></i> My Account</a></li>
+                                <li><a href="uc_base.html"><i class="fa fa-user-circle"></i> My Account</a></li>
                                 <li><a href="checkout.html"><i class="fa fa-credit-card"></i> Checkout</a></li>
                                 <li><a href="login-register.html"><i class="fa fa-sign-in"></i> Sign In</a></li>
                             </ul>
@@ -89,7 +90,7 @@
                         <div class="col-auto">
                             <div class="logo">
                                 <a href="index.html">
-                                    <img src="assets/img/logo/logo.png" alt="Brand Logo">
+                                    <img src="{% static 'img/logo/logo.png'%}" alt="Brand Logo">
                                 </a>
                             </div>
                         </div>
@@ -145,7 +146,7 @@
                                                     </li>
                                                     <li class="mega-title"><span>column 04</span>
                                                         <ul>
-                                                            <li><a href="my-account.html">my-account</a></li>
+                                                            <li><a href="uc_base.html">my-account</a></li>
                                                             <li><a href="login-register.html">login-register</a></li>
                                                             <li><a href="about-us.html">about us</a></li>
                                                             <li><a href="contact-us.html">contact us</a></li>
@@ -220,7 +221,7 @@
                                                 <ul class="cart-list">
                                                     <li>
                                                         <div class="cart-img">
-                                                            <a href="product-details.html"><img src="assets/img/cart/cart-1.jpg" alt=""></a>
+                                                            <a href="product-details.html"><img src="{% static 'img/cart/cart-1.jpg'%}" alt=""></a>
                                                         </div>
                                                         <div class="cart-info">
                                                             <h6 class="product-name"><a href="product-details.html">7th Generation classic</a></h6>
@@ -233,7 +234,7 @@
                                                     </li>
                                                     <li>
                                                         <div class="cart-img">
-                                                            <a href="product-details.html"><img src="assets/img/cart/cart-2.jpg" alt=""></a>
+                                                            <a href="product-details.html"><img src="{% static 'img/cart/cart-2.jpg'%}" alt=""></a>
                                                         </div>
                                                         <div class="cart-info">
                                                             <h6 class="product-name"><a href="product-details.html">Digital 8th generation</a></h6>
@@ -292,7 +293,7 @@
                         <div class="mobile-main-header">
                             <div class="mobile-logo">
                                 <a href="index.html">
-                                    <img src="assets/img/logo/logo.png" alt="Brand Logo">
+                                    <img src="{% static 'img/logo/logo.png'%}" alt="Brand Logo">
                                 </a>
                             </div>
                             <div class="mobile-menu-toggler">
@@ -385,7 +386,7 @@
                                         </li>
                                         <li class="mega-title menu-item-has-children"><a href="#">column 04</a>
                                             <ul class="dropdown">
-                                                <li><a href="my-account.html">my-account</a></li>
+                                                <li><a href="uc_base.html">my-account</a></li>
                                                 <li><a href="login-register.html">login-register</a></li>
                                                 <li><a href="about-us.html">about us</a></li>
                                                 <li><a href="contact-us.html">contact us</a></li>
@@ -462,7 +463,7 @@
                                         <i class="fa fa-angle-down"></i>
                                     </a>
                                     <div class="dropdown-menu" aria-labelledby="myaccount">
-                                        <a class="dropdown-item" href="my-account.html">my account</a>
+                                        <a class="dropdown-item" href="uc_base.html">my account</a>
                                         <a class="dropdown-item" href="login-register.html"> login</a>
                                         <a class="dropdown-item" href="login-register.html">register</a>
                                     </div>
@@ -521,7 +522,7 @@
 
     <main>
         <!-- breadcrumb area start -->
-        <div class="breadcrumb-area breadcrumb-img bg-img" data-bg="assets/img/banner/shop.jpg">
+        <div class="breadcrumb-area breadcrumb-img bg-img" data-bg="{% static 'img/banner/shop.jpg'%}">
             <div class="container">
                 <div class="row">
                     <div class="col-12">
@@ -582,7 +583,7 @@
                                     <div class="recent-post-item">
                                         <figure class="product-thumb">
                                             <a href="blog-details.html">
-                                                <img src="assets/img/blog/blog-1.jpg" alt="blog image">
+                                                <img src="{% static 'img/blog/blog-1.jpg'%}" alt="blog image">
                                             </a>
                                         </figure>
                                         <div class="recent-post-description">
@@ -595,7 +596,7 @@
                                     <div class="recent-post-item">
                                         <figure class="product-thumb">
                                             <a href="blog-details.html">
-                                                <img src="assets/img/blog/blog-2.jpg" alt="blog image">
+                                                <img src="{% static 'img/blog/blog-2.jpg'%}" alt="blog image">
                                             </a>
                                         </figure>
                                         <div class="recent-post-description">
@@ -608,7 +609,7 @@
                                     <div class="recent-post-item">
                                         <figure class="product-thumb">
                                             <a href="blog-details.html">
-                                                <img src="assets/img/blog/blog-3.jpg" alt="blog image">
+                                                <img src="{% static 'img/blog/blog-3.jpg'%}" alt="blog image">
                                             </a>
                                         </figure>
                                         <div class="recent-post-description">
@@ -695,7 +696,7 @@
                                     <ul>
                                         <li>
                                             <div class="author-avatar">
-                                                <img src="assets/img/blog/comment-icon.png" alt="">
+                                                <img src="{% static 'img/blog/comment-icon.png'%}" alt="">
                                             </div>
                                             <div class="comment-body">
                                                 <span class="reply-btn"><a href="#">Reply</a></span>
@@ -709,7 +710,7 @@
                                         </li>
                                         <li class="comment-children">
                                             <div class="author-avatar">
-                                                <img src="assets/img/blog/comment-icon.png" alt="">
+                                                <img src="{% static 'img/blog/comment-icon.png'%}" alt="">
                                             </div>
                                             <div class="comment-body">
                                                 <span class="reply-btn"><a href="#">Reply</a></span>
@@ -723,7 +724,7 @@
                                         </li>
                                         <li>
                                             <div class="author-avatar">
-                                                <img src="assets/img/blog/comment-icon.png" alt="">
+                                                <img src="{% static 'img/blog/comment-icon.png'%}" alt="">
                                             </div>
                                             <div class="comment-body">
                                                 <span class="reply-btn"><a href="#">Reply</a></span>

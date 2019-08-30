@@ -14,5 +14,11 @@ urlpatterns=[
     url(r'^login',views.Login.as_view(),name="login"),
     url(r'^get_captcha/$', views.get_captcha, name='get_captcha'),
     url(r'logout/$', views.logout, name="logout"),
+    url(r'password/forget/$', views.PasswordForget.as_view(), name="password_forget"),
+    url(r'password/reset/(\w+)/$', views.PasswordReset.as_view(), name="password_reset"),
+    url(r'^shoplist/$',views.shoplist,name="shoplist"),
+
+
+
 
  ]

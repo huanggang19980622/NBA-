@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<thead>
+        <tr>
+          <th data-field="state" data-checkbox="true"></th>
+          <th data-field="id">序号</th>
+          <th data-field="title"
+              data-formatter="titleFormatter">标题</th>
+          <th data-field="grade"
+              data-formatter="gradeFormatter"
+          >难度</th>
+          <th data-field="answer"
+              data-formatter="answerFormatter"
+          >答题率</th>
+          <th data-field="oper"
+              /*操作格式为自定义函数operateFormatter返回的样式*/
+              data-formatter="operateFormatter"
+              /*操作动作为自定义函数operateEvents-改这里*/
+              data-events="operateEvents"
+          >操作</th>
+        </tr>
+  </thead>
+</body>
+</html>

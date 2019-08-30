@@ -1,4 +1,5 @@
-﻿<!doctype html>
+﻿{% load staticfiles %}
+<!doctype html>
 <html class="no-js" lang="zxx">
 
 <head>
@@ -9,26 +10,26 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <!-- Favicon -->
-    <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.ico">
+    <link rel="shortcut icon" type="image/x-icon" href="{% static 'img/favicon.ico' %}">
 
     <!-- CSS
 	============================================ -->
     <!-- google fonts -->
     <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:300,300i,400,400i,600,700,800,900%7CPoppins:300,400,500,600,700,800,900" rel="stylesheet">
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="assets/css/vendor/bootstrap.min.css">
+    <link rel="stylesheet" href="{% static 'css/vendor/bootstrap.min.css' %}">
     <!-- Font-awesome CSS -->
-    <link rel="stylesheet" href="assets/css/vendor/font-awesome.min.css">
+    <link rel="stylesheet" href="{% static 'css/vendor/font-awesome.min.css' %}">
     <!-- Slick slider css -->
-    <link rel="stylesheet" href="assets/css/plugins/slick.min.css">
+    <link rel="stylesheet" href="{% static 'css/plugins/slick.min.css' %}">
     <!-- animate css -->
-    <link rel="stylesheet" href="assets/css/plugins/animate.css">
+    <link rel="stylesheet" href="{% static 'css/plugins/animate.css' %}">
     <!-- Nice Select css -->
-    <link rel="stylesheet" href="assets/css/plugins/nice-select.css">
+    <link rel="stylesheet" href="{% static 'css/plugins/nice-select.css' %}">
     <!-- jquery UI css -->
-    <link rel="stylesheet" href="assets/css/plugins/jqueryui.min.css">
+    <link rel="stylesheet" href="{% static 'css/plugins/jqueryui.min.css' %}">
     <!-- main style css -->
-    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
 
 </head>
 
@@ -45,11 +46,11 @@
                             <div class="top-left-navigation">
                                 <ul class="nav align-items-center">
                                     <li class="language">
-                                        <img src="assets/img/icon/en.png" alt="flag"> ENGLISH
+                                        <img src="{% static 'img/icon/en.png' %}" alt="flag"> ENGLISH
                                         <i class="fa fa-angle-down"></i>
                                         <ul class="dropdown-list">
-                                            <li><a href="#"><img src="assets/img/icon/en.png" alt="flag"> English</a></li>
-                                            <li><a href="#"><img src="assets/img/icon/fr.png" alt="flag"> French</a></li>
+                                            <li><a href="#"><img src="{% static 'img/icon/en.png' %}" alt="flag"> English</a></li>
+                                            <li><a href="#"><img src="{% static 'img/icon/fr.png' %}" alt="flag"> French</a></li>
                                         </ul>
                                     </li>
                                     <li class="curreny-wrap">
@@ -89,7 +90,7 @@
                         <div class="col-auto">
                             <div class="logo">
                                 <a href="index.html">
-                                    <img src="assets/img/logo/logo.png" alt="Brand Logo">
+                                    <img src="{% static 'img/logo/logo.png' %}" alt="Brand Logo">
                                 </a>
                             </div>
                         </div>
@@ -220,7 +221,7 @@
                                                 <ul class="cart-list">
                                                     <li>
                                                         <div class="cart-img">
-                                                            <a href="product-details.html"><img src="assets/img/cart/cart-1.jpg" alt=""></a>
+                                                            <a href="product-details.html"><img src="{% static 'img/cart/cart-1.jpg' %}" alt=""></a>
                                                         </div>
                                                         <div class="cart-info">
                                                             <h6 class="product-name"><a href="product-details.html">7th Generation classic</a></h6>
@@ -233,7 +234,7 @@
                                                     </li>
                                                     <li>
                                                         <div class="cart-img">
-                                                            <a href="product-details.html"><img src="assets/img/cart/cart-2.jpg" alt=""></a>
+                                                            <a href="product-details.html"><img src="{% static 'img/cart/cart-2.jpg' %}" alt=""></a>
                                                         </div>
                                                         <div class="cart-info">
                                                             <h6 class="product-name"><a href="product-details.html">Digital 8th generation</a></h6>
@@ -292,7 +293,7 @@
                         <div class="mobile-main-header">
                             <div class="mobile-logo">
                                 <a href="index.html">
-                                    <img src="assets/img/logo/logo.png" alt="Brand Logo">
+                                    <img src="{% static 'img/logo/logo.png' %}" alt="Brand Logo">
                                 </a>
                             </div>
                             <div class="mobile-menu-toggler">
@@ -521,7 +522,7 @@
 
     <main>
         <!-- breadcrumb area start -->
-        <div class="breadcrumb-area breadcrumb-img bg-img" data-bg="assets/img/banner/shop.jpg">
+        <div class="breadcrumb-area breadcrumb-img bg-img" data-bg="{% static 'img/banner/shop.jpg' %}">
             <div class="container">
                 <div class="row">
                     <div class="col-12">
@@ -548,55 +549,90 @@
                     <div class="col-lg-12">
                         <div class="shop-product-wrapper">
                             <!-- shop product top wrap start -->
-                            <div class="shop-top-bar">
-                                <div class="row align-items-center">
-                                    <div class="col-lg-7 col-md-6 order-2 order-md-1">
-                                        <div class="top-bar-left">
-                                            <div class="product-view-mode">
-                                                <a class="active" href="#" data-target="grid-view" data-toggle="tooltip" title="Grid View"><i class="fa fa-th"></i></a>
-                                                <a href="#" data-target="list-view" data-toggle="tooltip" title="List View"><i class="fa fa-list"></i></a>
-                                            </div>
-                                            <div class="product-amount">
-                                                <p>Showing 1–16 of 21 results</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-5 col-md-6 order-1 order-md-2">
-                                        <div class="top-bar-right">
-                                            <div class="product-short">
-                                                <p>Sort By : </p>
-                                                <select class="nice-select" name="sortby">
-                                                    <option value="trending">Relevance</option>
-                                                    <option value="sales">Name (A - Z)</option>
-                                                    <option value="sales">Name (Z - A)</option>
-                                                    <option value="rating">Price (Low &gt; High)</option>
-                                                    <option value="date">Rating (Lowest)</option>
-                                                    <option value="price-asc">Model (A - Z)</option>
-                                                    <option value="price-asc">Model (Z - A)</option>
-                                                </select>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+{#                            <div class="shop-top-bar">#}
+{#                                <div class="row align-items-center">#}
+{#                                    <div class="col-lg-7 col-md-6 order-2 order-md-1">#}
+{#                                        <div class="top-bar-left">#}
+{#                                            <div class="product-view-mode">#}
+{#                                                <a class="active" href="#" data-target="grid-view" data-toggle="tooltip" title="Grid View"><i class="fa fa-th"></i></a>#}
+{#                                                <a href="#" data-target="list-view" data-toggle="tooltip" title="List View"><i class="fa fa-list"></i></a>#}
+{#                                            </div>#}
+{#                                            <div class="product-amount">#}
+{#                                                <p>Showing 1–16 of 21 results</p>#}
+{#                                            </div>#}
+{#                                        </div>#}
+{#                                    </div>#}
+{#                                    <div class="col-lg-5 col-md-6 order-1 order-md-2">#}
+{#                                        <div class="top-bar-right">#}
+{#                                            <div class="product-short">#}
+{#                                                <p>Sort By : </p>#}
+{#                                                <select class="nice-select" name="sortby">#}
+{#                                                    <option value="trending">Relevance</option>#}
+{#                                                    <option value="rating">Price (Low &gt; High)</option>#}
+{#                                                    <option value="date">Rating (Lowest)</option>#}
+{#                                                    <option value="price-asc">Model (A - Z)</option>#}
+{#                                                    <option value="price-asc">Model (Z - A)</option>#}
+{#                                                </select>#}
+{#                                            </div>#}
+{#                                        </div>#}
+{#                                    </div>#}
+{#                                </div>#}
+{#                            </div>#}
+                              <div id="toolbar_table_questions">
+                  <form class="form-inline" role="form">
+                      <div class="form-group">
+                          <select class="form-control" id="grade" name="grade">
+                              <option value="0"> 商品类型 </option>
+
+                                {% for i in types %}
+                              <option value="{{ i.id }}"> {{ i.name }} </option>
+                              {% endfor %}
+
+                          </select>
+                      </div>
+                      <div class="form-group">
+
+                          <select class="form-control" id="category" name="category">
+                              <option value="0"> 选择分类 </option>
+                              {% for item in new_skus %}
+                              <option value="{{ item.goods_id }}">{{ item.goods.name}}</option>
+                              {% endfor %}
+                          </select>
+                      </div>
+                      <div class="form-group">
+                          <select class="form-control" id="status" name="status">
+                              <option value="2"> 选择状态 </option>
+
+                                  <option value="0"> NEW</option>
+                                  <option value="1"> HOT</option>
+
+
+
+                          </select>
+                      </div>
+
+
+                  </form>
+       </div>
                             <!-- shop product top wrap start -->
 
                             <!-- product item list wrapper start -->
                             <div class="shop-product-wrap grid-view row mbn-30">
+                                {% for sku in new_skus %}
                                 <!-- product single item start -->
                                 <div class="col-lg-3 col-md-4 col-sm-6">
                                     <!-- product grid start -->
                                     <div class="product-item">
                                         <div class="product-thumb">
-                                            <a href="product-details.html">
-                                                <img src="assets/img/product/product-1.jpg" alt="product thumb">
+                                            <a href="{% url 'shops:detail' sku.id %}">
+                                                <img src="{{ sku.image.url }}" alt="product thumb">
                                             </a>
                                             <div class="button-group">
                                                 <a href="wishlist.html" data-toggle="tooltip" title="Add to Wishlist"><i class="fa fa-heart-o"></i></a>
                                                 <a href="#" data-toggle="modal" data-target="#quick_view"><span data-toggle="tooltip"  title="Quick View"><i class="fa fa-eye"></i></span></a>
                                             </div>
                                             <div class="product-label">
-                                                <span>new</span>
+                                                <span>{{ sku.status_choices }}</span>
                                             </div>
                                             <div class="discount-label">
                                                 <span>-10% Off</span>
@@ -605,11 +641,11 @@
                                         <div class="product-content">
                                             <div class="product-caption">
                                                 <h6 class="product-name">
-                                                    <a href="product-details.html">Quickiin Mens shoes</a>
+                                                    <a href="{% url 'shops:detail' sku.id %}">{{ sku.name }}</a>
                                                 </h6>
                                                 <div class="price-box">
-                                                    <span class="price-old"><del>$90.00</del></span>
-                                                    <span class="price-regular">$70.00</span>
+
+                                                    <span class="price-regular">{{ sku.price }}</span>
                                                 </div>
                                                 <a class="add-to-cart" href="cart.html"><i class="fa fa-shopping-cart"></i></a>
                                             </div>
@@ -628,537 +664,7 @@
                                     <div class="product-list-item">
                                         <div class="product-thumb">
                                             <a href="product-details.html">
-                                                <img src="assets/img/product/product-1.jpg" alt="product thumb">
-                                            </a>
-                                            <div class="button-group">
-                                                <a href="wishlist.html" data-toggle="tooltip" title="Add to Wishlist"><i class="fa fa-heart-o"></i></a>
-                                                <a href="#" data-toggle="modal" data-target="#quick_view"><span data-toggle="tooltip"  title="Quick View"><i class="fa fa-eye"></i></span></a>
-                                            </div>
-                                            <div class="product-label">
-                                                <span>new</span>
-                                            </div>
-                                            <div class="discount-label">
-                                                <span>-10% Off</span>
-                                            </div>
-                                        </div>
-                                        <div class="product-content-list">
-                                            <h4 class="product-name"><a href="product-details.html">Quickiin Mens shoes</a></h4>
-                                            <div class="ratings">
-                                                <span><i class="fa fa-star"></i></span>
-                                                <span><i class="fa fa-star"></i></span>
-                                                <span><i class="fa fa-star"></i></span>
-                                                <span><i class="fa fa-star"></i></span>
-                                                <span><i class="fa fa-star"></i></span>
-                                            </div>
-                                            <div class="price-box">
-                                                <span class="price-old"><del>$29.99</del></span>
-                                                <span class="price-regular">$50.00</span>
-                                            </div>
-                                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Unde perspiciatis
-                                                quod numquam, sit fugiat, deserunt ipsa mollitia sunt quam.
-                                            </p>
-                                            <a href="cart.html" class="btn btn-large hover-color">Add To Cart</a>
-                                        </div>
-                                    </div>
-                                    <!-- product list item end -->
-                                </div>
-                                <!-- product single item start -->
-
-                                <!-- product single item start -->
-                                <div class="col-lg-3 col-md-4 col-sm-6">
-                                    <!-- product grid start -->
-                                    <div class="product-item">
-                                        <div class="product-thumb">
-                                            <a href="product-details.html">
-                                                <img src="assets/img/product/product-2.jpg" alt="product thumb">
-                                            </a>
-                                            <div class="button-group">
-                                                <a href="wishlist.html" data-toggle="tooltip" title="Add to Wishlist"><i class="fa fa-heart-o"></i></a>
-                                                <a href="#" data-toggle="modal" data-target="#quick_view"><span data-toggle="tooltip"  title="Quick View"><i class="fa fa-eye"></i></span></a>
-                                            </div>
-                                            <div class="product-label">
-                                                <span>new</span>
-                                            </div>
-                                        </div>
-                                        <div class="product-content">
-                                            <div class="product-caption">
-                                                <h6 class="product-name">
-                                                    <a href="product-details.html">Womens High Hills</a>
-                                                </h6>
-                                                <div class="price-box">
-                                                    <span class="price-old"><del>$85.00</del></span>
-                                                    <span class="price-regular">$60.00</span>
-                                                </div>
-                                                <a class="add-to-cart" href="cart.html"><i class="fa fa-shopping-cart"></i></a>
-                                            </div>
-                                            <div class="ratings">
-                                                <span><i class="fa fa-star"></i></span>
-                                                <span><i class="fa fa-star"></i></span>
-                                                <span><i class="fa fa-star"></i></span>
-                                                <span><i class="fa fa-star"></i></span>
-                                                <span><i class="fa fa-star"></i></span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- product grid end -->
-
-                                    <!-- product list item end -->
-                                    <div class="product-list-item">
-                                        <div class="product-thumb">
-                                            <a href="product-details.html">
-                                                <img src="assets/img/product/product-2.jpg" alt="product thumb">
-                                            </a>
-                                            <div class="button-group">
-                                                <a href="wishlist.html" data-toggle="tooltip" title="Add to Wishlist"><i class="fa fa-heart-o"></i></a>
-                                                <a href="#" data-toggle="modal" data-target="#quick_view"><span data-toggle="tooltip"  title="Quick View"><i class="fa fa-eye"></i></span></a>
-                                            </div>
-                                            <div class="product-label">
-                                                <span>new</span>
-                                            </div>
-                                        </div>
-                                        <div class="product-content-list">
-                                            <h4 class="product-name"><a href="product-details.html">Womens High Hills</a></h4>
-                                            <div class="ratings">
-                                                <span><i class="fa fa-star"></i></span>
-                                                <span><i class="fa fa-star"></i></span>
-                                                <span><i class="fa fa-star"></i></span>
-                                                <span><i class="fa fa-star"></i></span>
-                                                <span><i class="fa fa-star"></i></span>
-                                            </div>
-                                            <div class="price-box">
-                                                <span class="price-old"><del>$85.00</del></span>
-                                                <span class="price-regular">$70.00</span>
-                                            </div>
-                                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Unde perspiciatis
-                                                quod numquam, sit fugiat, deserunt ipsa mollitia sunt quam.
-                                            </p>
-                                            <a href="cart.html" class="btn btn-large hover-color">Add To Cart</a>
-                                        </div>
-                                    </div>
-                                    <!-- product list item end -->
-                                </div>
-                                <!-- product single item start -->
-
-                                <!-- product single item start -->
-                                <div class="col-lg-3 col-md-4 col-sm-6">
-                                    <!-- product grid start -->
-                                    <div class="product-item">
-                                        <div class="product-thumb">
-                                            <a href="product-details.html">
-                                                <img src="assets/img/product/product-3.jpg" alt="product thumb">
-                                            </a>
-                                            <div class="button-group">
-                                                <a href="wishlist.html" data-toggle="tooltip" title="Add to Wishlist"><i class="fa fa-heart-o"></i></a>
-                                                <a href="#" data-toggle="modal" data-target="#quick_view"><span data-toggle="tooltip"  title="Quick View"><i class="fa fa-eye"></i></span></a>
-                                            </div>
-                                            <div class="product-label">
-                                                <span>new</span>
-                                            </div>
-                                        </div>
-                                        <div class="product-content">
-                                            <div class="product-caption">
-                                                <h6 class="product-name">
-                                                    <a href="product-details.html">Leather Mens slippers</a>
-                                                </h6>
-                                                <div class="price-box">
-                                                    <span class="price-old"><del>$70.00</del></span>
-                                                    <span class="price-regular">$50.00</span>
-                                                </div>
-                                                <a class="add-to-cart" href="cart.html"><i class="fa fa-shopping-cart"></i></a>
-                                            </div>
-                                            <div class="ratings">
-                                                <span><i class="fa fa-star"></i></span>
-                                                <span><i class="fa fa-star"></i></span>
-                                                <span><i class="fa fa-star"></i></span>
-                                                <span><i class="fa fa-star"></i></span>
-                                                <span><i class="fa fa-star"></i></span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- product grid end -->
-
-                                    <!-- product list item end -->
-                                    <div class="product-list-item">
-                                        <div class="product-thumb">
-                                            <a href="product-details.html">
-                                                <img src="assets/img/product/product-3.jpg" alt="product thumb">
-                                            </a>
-                                            <div class="button-group">
-                                                <a href="wishlist.html" data-toggle="tooltip" title="Add to Wishlist"><i class="fa fa-heart-o"></i></a>
-                                                <a href="#" data-toggle="modal" data-target="#quick_view"><span data-toggle="tooltip"  title="Quick View"><i class="fa fa-eye"></i></span></a>
-                                            </div>
-                                            <div class="product-label">
-                                                <span>new</span>
-                                            </div>
-                                        </div>
-                                        <div class="product-content-list">
-                                            <h4 class="product-name"><a href="product-details.html">QLeather Mens slippers</a></h4>
-                                            <div class="ratings">
-                                                <span><i class="fa fa-star"></i></span>
-                                                <span><i class="fa fa-star"></i></span>
-                                                <span><i class="fa fa-star"></i></span>
-                                                <span><i class="fa fa-star"></i></span>
-                                                <span><i class="fa fa-star"></i></span>
-                                            </div>
-                                            <div class="price-box">
-                                                <span class="price-old"><del>$90</del></span>
-                                                <span class="price-regular">$60.00</span>
-                                            </div>
-                                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Unde perspiciatis
-                                                quod numquam, sit fugiat, deserunt ipsa mollitia sunt quam.
-                                            </p>
-                                            <a href="cart.html" class="btn btn-large hover-color">Add To Cart</a>
-                                        </div>
-                                    </div>
-                                    <!-- product list item end -->
-                                </div>
-                                <!-- product single item start -->
-
-                                <!-- product single item start -->
-                                <div class="col-lg-3 col-md-4 col-sm-6">
-                                    <!-- product grid start -->
-                                    <div class="product-item">
-                                        <div class="product-thumb">
-                                            <a href="product-details.html">
-                                                <img src="assets/img/product/product-4.jpg" alt="product thumb">
-                                            </a>
-                                            <div class="button-group">
-                                                <a href="wishlist.html" data-toggle="tooltip" title="Add to Wishlist"><i class="fa fa-heart-o"></i></a>
-                                                <a href="#" data-toggle="modal" data-target="#quick_view"><span data-toggle="tooltip"  title="Quick View"><i class="fa fa-eye"></i></span></a>
-                                            </div>
-                                            <div class="product-label">
-                                                <span>new</span>
-                                            </div>
-                                            <div class="discount-label">
-                                                <span>-10% Off</span>
-                                            </div>
-                                        </div>
-                                        <div class="product-content">
-                                            <div class="product-caption">
-                                                <h6 class="product-name">
-                                                    <a href="product-details.html">Rexpo Womens shoes</a>
-                                                </h6>
-                                                <div class="price-box">
-                                                    <span class="price-regular">$70.00</span>
-                                                </div>
-                                                <a class="add-to-cart" href="cart.html"><i class="fa fa-shopping-cart"></i></a>
-                                            </div>
-                                            <div class="ratings">
-                                                <span><i class="fa fa-star"></i></span>
-                                                <span><i class="fa fa-star"></i></span>
-                                                <span><i class="fa fa-star"></i></span>
-                                                <span><i class="fa fa-star"></i></span>
-                                                <span><i class="fa fa-star"></i></span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- product grid end -->
-
-                                    <!-- product list item end -->
-                                    <div class="product-list-item">
-                                        <div class="product-thumb">
-                                            <a href="product-details.html">
-                                                <img src="assets/img/product/product-4.jpg" alt="product thumb">
-                                            </a>
-                                            <div class="button-group">
-                                                <a href="wishlist.html" data-toggle="tooltip" title="Add to Wishlist"><i class="fa fa-heart-o"></i></a>
-                                                <a href="#" data-toggle="modal" data-target="#quick_view"><span data-toggle="tooltip"  title="Quick View"><i class="fa fa-eye"></i></span></a>
-                                            </div>
-                                            <div class="product-label">
-                                                <span>new</span>
-                                            </div>
-                                        </div>
-                                        <div class="product-content-list">
-                                            <h4 class="product-name"><a href="product-details.html">Rexpo Womens shoes</a></h4>
-                                            <div class="ratings">
-                                                <span><i class="fa fa-star"></i></span>
-                                                <span><i class="fa fa-star"></i></span>
-                                                <span><i class="fa fa-star"></i></span>
-                                                <span><i class="fa fa-star"></i></span>
-                                                <span><i class="fa fa-star"></i></span>
-                                            </div>
-                                            <div class="price-box">
-                                                <span class="price-regular">$70.00</span>
-                                            </div>
-                                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Unde perspiciatis
-                                                quod numquam, sit fugiat, deserunt ipsa mollitia sunt quam.
-                                            </p>
-                                            <a href="cart.html" class="btn btn-large hover-color">Add To Cart</a>
-                                        </div>
-                                    </div>
-                                    <!-- product list item end -->
-                                </div>
-                                <!-- product single item start -->
-
-                                <!-- product single item start -->
-                                <div class="col-lg-3 col-md-4 col-sm-6">
-                                    <!-- product grid start -->
-                                    <div class="product-item">
-                                        <div class="product-thumb">
-                                            <a href="product-details.html">
-                                                <img src="assets/img/product/product-5.jpg" alt="product thumb">
-                                            </a>
-                                            <div class="button-group">
-                                                <a href="wishlist.html" data-toggle="tooltip" title="Add to Wishlist"><i class="fa fa-heart-o"></i></a>
-                                                <a href="#" data-toggle="modal" data-target="#quick_view"><span data-toggle="tooltip"  title="Quick View"><i class="fa fa-eye"></i></span></a>
-                                            </div>
-                                            <div class="product-label">
-                                                <span>new</span>
-                                            </div>
-                                        </div>
-                                        <div class="product-content">
-                                            <div class="product-caption">
-                                                <h6 class="product-name">
-                                                    <a href="product-details.html">Primitive Mens shoes</a>
-                                                </h6>
-                                                <div class="price-box">
-                                                    <span class="price-regular">$60.00</span>
-                                                </div>
-                                                <a class="add-to-cart" href="cart.html"><i class="fa fa-shopping-cart"></i></a>
-                                            </div>
-                                            <div class="ratings">
-                                                <span><i class="fa fa-star"></i></span>
-                                                <span><i class="fa fa-star"></i></span>
-                                                <span><i class="fa fa-star"></i></span>
-                                                <span><i class="fa fa-star"></i></span>
-                                                <span><i class="fa fa-star"></i></span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- product grid end -->
-
-                                    <!-- product list item end -->
-                                    <div class="product-list-item">
-                                        <div class="product-thumb">
-                                            <a href="product-details.html">
-                                                <img src="assets/img/product/product-5.jpg" alt="product thumb">
-                                            </a>
-                                            <div class="button-group">
-                                                <a href="wishlist.html" data-toggle="tooltip" title="Add to Wishlist"><i class="fa fa-heart-o"></i></a>
-                                                <a href="#" data-toggle="modal" data-target="#quick_view"><span data-toggle="tooltip"  title="Quick View"><i class="fa fa-eye"></i></span></a>
-                                            </div>
-                                            <div class="product-label">
-                                                <span>new</span>
-                                            </div>
-                                        </div>
-                                        <div class="product-content-list">
-                                            <h4 class="product-name"><a href="product-details.html">Primitive Mens shoes</a></h4>
-                                            <div class="ratings">
-                                                <span><i class="fa fa-star"></i></span>
-                                                <span><i class="fa fa-star"></i></span>
-                                                <span><i class="fa fa-star"></i></span>
-                                                <span><i class="fa fa-star"></i></span>
-                                                <span><i class="fa fa-star"></i></span>
-                                            </div>
-                                            <div class="price-box">
-                                                <span class="price-regular">$60.00</span>
-                                            </div>
-                                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Unde perspiciatis
-                                                quod numquam, sit fugiat, deserunt ipsa mollitia sunt quam.
-                                            </p>
-                                            <a href="cart.html" class="btn btn-large hover-color">Add To Cart</a>
-                                        </div>
-                                    </div>
-                                    <!-- product list item end -->
-                                </div>
-                                <!-- product single item start -->
-
-                                <!-- product single item start -->
-                                <div class="col-lg-3 col-md-4 col-sm-6">
-                                    <!-- product grid start -->
-                                    <div class="product-item">
-                                        <div class="product-thumb">
-                                            <a href="product-details.html">
-                                                <img src="assets/img/product/product-6.jpg" alt="product thumb">
-                                            </a>
-                                            <div class="button-group">
-                                                <a href="wishlist.html" data-toggle="tooltip" title="Add to Wishlist"><i class="fa fa-heart-o"></i></a>
-                                                <a href="#" data-toggle="modal" data-target="#quick_view"><span data-toggle="tooltip"  title="Quick View"><i class="fa fa-eye"></i></span></a>
-                                            </div>
-                                            <div class="product-label">
-                                                <span>new</span>
-                                            </div>
-                                        </div>
-                                        <div class="product-content">
-                                            <div class="product-caption">
-                                                <h6 class="product-name">
-                                                    <a href="product-details.html">Quickiin Mens shoes</a>
-                                                </h6>
-                                                <div class="price-box">
-                                                    <span class="price-old"><del>$80.00</del></span>
-                                                    <span class="price-regular">$40.00</span>
-                                                </div>
-                                                <a class="add-to-cart" href="cart.html"><i class="fa fa-shopping-cart"></i></a>
-                                            </div>
-                                            <div class="ratings">
-                                                <span><i class="fa fa-star"></i></span>
-                                                <span><i class="fa fa-star"></i></span>
-                                                <span><i class="fa fa-star"></i></span>
-                                                <span><i class="fa fa-star"></i></span>
-                                                <span><i class="fa fa-star"></i></span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- product grid end -->
-
-                                    <!-- product list item end -->
-                                    <div class="product-list-item">
-                                        <div class="product-thumb">
-                                            <a href="product-details.html">
-                                                <img src="assets/img/product/product-6.jpg" alt="product thumb">
-                                            </a>
-                                            <div class="button-group">
-                                                <a href="wishlist.html" data-toggle="tooltip" title="Add to Wishlist"><i class="fa fa-heart-o"></i></a>
-                                                <a href="#" data-toggle="modal" data-target="#quick_view"><span data-toggle="tooltip"  title="Quick View"><i class="fa fa-eye"></i></span></a>
-                                            </div>
-                                            <div class="product-label">
-                                                <span>new</span>
-                                            </div>
-                                        </div>
-                                        <div class="product-content-list">
-                                            <h4 class="product-name"><a href="product-details.html">Quickiin Mens shoes</a></h4>
-                                            <div class="ratings">
-                                                <span><i class="fa fa-star"></i></span>
-                                                <span><i class="fa fa-star"></i></span>
-                                                <span><i class="fa fa-star"></i></span>
-                                                <span><i class="fa fa-star"></i></span>
-                                                <span><i class="fa fa-star"></i></span>
-                                            </div>
-                                            <div class="price-box">
-                                                <span class="price-old"><del>$80.00</del></span>
-                                                <span class="price-regular">$40.00</span>
-                                            </div>
-                                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Unde perspiciatis
-                                                quod numquam, sit fugiat, deserunt ipsa mollitia sunt quam.
-                                            </p>
-                                            <a href="cart.html" class="btn btn-large hover-color">Add To Cart</a>
-                                        </div>
-                                    </div>
-                                    <!-- product list item end -->
-                                </div>
-                                <!-- product single item start -->
-
-                                <!-- product single item start -->
-                                <div class="col-lg-3 col-md-4 col-sm-6">
-                                    <!-- product grid start -->
-                                    <div class="product-item">
-                                        <div class="product-thumb">
-                                            <a href="product-details.html">
-                                                <img src="assets/img/product/product-7.jpg" alt="product thumb">
-                                            </a>
-                                            <div class="button-group">
-                                                <a href="wishlist.html" data-toggle="tooltip" title="Add to Wishlist"><i class="fa fa-heart-o"></i></a>
-                                                <a href="#" data-toggle="modal" data-target="#quick_view"><span data-toggle="tooltip"  title="Quick View"><i class="fa fa-eye"></i></span></a>
-                                            </div>
-                                            <div class="product-label">
-                                                <span>new</span>
-                                            </div>
-                                        </div>
-                                        <div class="product-content">
-                                            <div class="product-caption">
-                                                <h6 class="product-name">
-                                                    <a href="product-details.html">Womens High Hills</a>
-                                                </h6>
-                                                <div class="price-box">
-                                                    <span class="price-old"><del>$90.00</del></span>
-                                                    <span class="price-regular">$70.00</span>
-                                                </div>
-                                                <a class="add-to-cart" href="cart.html"><i class="fa fa-shopping-cart"></i></a>
-                                            </div>
-                                            <div class="ratings">
-                                                <span><i class="fa fa-star"></i></span>
-                                                <span><i class="fa fa-star"></i></span>
-                                                <span><i class="fa fa-star"></i></span>
-                                                <span><i class="fa fa-star"></i></span>
-                                                <span><i class="fa fa-star"></i></span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- product grid end -->
-
-                                    <!-- product list item end -->
-                                    <div class="product-list-item">
-                                        <div class="product-thumb">
-                                            <a href="product-details.html">
-                                                <img src="assets/img/product/product-7.jpg" alt="product thumb">
-                                            </a>
-                                            <div class="button-group">
-                                                <a href="wishlist.html" data-toggle="tooltip" title="Add to Wishlist"><i class="fa fa-heart-o"></i></a>
-                                                <a href="#" data-toggle="modal" data-target="#quick_view"><span data-toggle="tooltip"  title="Quick View"><i class="fa fa-eye"></i></span></a>
-                                            </div>
-                                            <div class="product-label">
-                                                <span>new</span>
-                                            </div>
-                                        </div>
-                                        <div class="product-content-list">
-                                            <h4 class="product-name"><a href="product-details.html">Womens High Hills</a></h4>
-                                            <div class="ratings">
-                                                <span><i class="fa fa-star"></i></span>
-                                                <span><i class="fa fa-star"></i></span>
-                                                <span><i class="fa fa-star"></i></span>
-                                                <span><i class="fa fa-star"></i></span>
-                                                <span><i class="fa fa-star"></i></span>
-                                            </div>
-                                            <div class="price-box">
-                                                <span class="price-old"><del>$30.00</del></span>
-                                                <span class="price-regular">$25.00</span>
-                                            </div>
-                                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Unde perspiciatis
-                                                quod numquam, sit fugiat, deserunt ipsa mollitia sunt quam.
-                                            </p>
-                                            <a href="cart.html" class="btn btn-large hover-color">Add To Cart</a>
-                                        </div>
-                                    </div>
-                                    <!-- product list item end -->
-                                </div>
-                                <!-- product single item start -->
-
-                                <!-- product single item start -->
-                                <div class="col-lg-3 col-md-4 col-sm-6">
-                                    <!-- product grid start -->
-                                    <div class="product-item">
-                                        <div class="product-thumb">
-                                            <a href="product-details.html">
-                                                <img src="assets/img/product/product-8.jpg" alt="product thumb">
-                                            </a>
-                                            <div class="button-group">
-                                                <a href="wishlist.html" data-toggle="tooltip" title="Add to Wishlist"><i class="fa fa-heart-o"></i></a>
-                                                <a href="#" data-toggle="modal" data-target="#quick_view"><span data-toggle="tooltip"  title="Quick View"><i class="fa fa-eye"></i></span></a>
-                                            </div>
-                                            <div class="product-label">
-                                                <span>new</span>
-                                            </div>
-                                            <div class="discount-label">
-                                                <span>-10% Off</span>
-                                            </div>
-                                        </div>
-                                        <div class="product-content">
-                                            <div class="product-caption">
-                                                <h6 class="product-name">
-                                                    <a href="product-details.html">LEATHER MENS SLIPPERS</a>
-                                                </h6>
-                                                <div class="price-box">
-                                                    <span class="price-old"><del>$40.00</del></span>
-                                                    <span class="price-regular">$50.00</span>
-                                                </div>
-                                                <a class="add-to-cart" href="cart.html"><i class="fa fa-shopping-cart"></i></a>
-                                            </div>
-                                            <div class="ratings">
-                                                <span><i class="fa fa-star"></i></span>
-                                                <span><i class="fa fa-star"></i></span>
-                                                <span><i class="fa fa-star"></i></span>
-                                                <span><i class="fa fa-star"></i></span>
-                                                <span><i class="fa fa-star"></i></span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- product grid end -->
-
-                                    <!-- product list item end -->
-                                    <div class="product-list-item">
-                                        <div class="product-thumb">
-                                            <a href="product-details.html">
-                                                <img src="assets/img/product/product-8.jpg" alt="product thumb">
+                                                <img src="" alt="product thumb">
                                             </a>
                                             <div class="button-group">
                                                 <a href="wishlist.html" data-toggle="tooltip" title="Add to Wishlist"><i class="fa fa-heart-o"></i></a>
@@ -1172,7 +678,7 @@
                                             </div>
                                         </div>
                                         <div class="product-content-list">
-                                            <h4 class="product-name"><a href="product-details.html">LEATHER MENS SLIPPERS</a></h4>
+                                            <h4 class="product-name"><a href="">{{ sku.name }}</a></h4>
                                             <div class="ratings">
                                                 <span><i class="fa fa-star"></i></span>
                                                 <span><i class="fa fa-star"></i></span>
@@ -1181,12 +687,10 @@
                                                 <span><i class="fa fa-star"></i></span>
                                             </div>
                                             <div class="price-box">
-                                                <span class="price-old"><del>$40.00</del></span>
-                                                <span class="price-regular">$50.00</span>
+
+                                                <span class="price-regular">{{ sku.price }}</span>
                                             </div>
-                                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Unde perspiciatis
-                                                quod numquam, sit fugiat, deserunt ipsa mollitia sunt quam.
-                                            </p>
+
                                             <a href="cart.html" class="btn btn-large hover-color">Add To Cart</a>
                                         </div>
                                     </div>
@@ -1194,309 +698,27 @@
                                 </div>
                                 <!-- product single item start -->
 
-                                <!-- product single item start -->
-                                <div class="col-lg-3 col-md-4 col-sm-6">
-                                    <!-- product grid start -->
-                                    <div class="product-item">
-                                        <div class="product-thumb">
-                                            <a href="product-details.html">
-                                                <img src="assets/img/product/product-9.jpg" alt="product thumb">
-                                            </a>
-                                            <div class="button-group">
-                                                <a href="wishlist.html" data-toggle="tooltip" title="Add to Wishlist"><i class="fa fa-heart-o"></i></a>
-                                                <a href="#" data-toggle="modal" data-target="#quick_view"><span data-toggle="tooltip"  title="Quick View"><i class="fa fa-eye"></i></span></a>
-                                            </div>
-                                            <div class="product-label">
-                                                <span>new</span>
-                                            </div>
-                                        </div>
-                                        <div class="product-content">
-                                            <div class="product-caption">
-                                                <h6 class="product-name">
-                                                    <a href="product-details.html">Womens High Hills</a>
-                                                </h6>
-                                                <div class="price-box">
-                                                    <span class="price-regular">$60.00</span>
-                                                </div>
-                                                <a class="add-to-cart" href="cart.html"><i class="fa fa-shopping-cart"></i></a>
-                                            </div>
-                                            <div class="ratings">
-                                                <span><i class="fa fa-star"></i></span>
-                                                <span><i class="fa fa-star"></i></span>
-                                                <span><i class="fa fa-star"></i></span>
-                                                <span><i class="fa fa-star"></i></span>
-                                                <span><i class="fa fa-star"></i></span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- product grid end -->
-
-                                    <!-- product list item end -->
-                                    <div class="product-list-item">
-                                        <div class="product-thumb">
-                                            <a href="product-details.html">
-                                                <img src="assets/img/product/product-9.jpg" alt="product thumb">
-                                            </a>
-                                            <div class="button-group">
-                                                <a href="wishlist.html" data-toggle="tooltip" title="Add to Wishlist"><i class="fa fa-heart-o"></i></a>
-                                                <a href="#" data-toggle="modal" data-target="#quick_view"><span data-toggle="tooltip"  title="Quick View"><i class="fa fa-eye"></i></span></a>
-                                            </div>
-                                            <div class="product-label">
-                                                <span>new</span>
-                                            </div>
-                                        </div>
-                                        <div class="product-content-list">
-                                            <h4 class="product-name"><a href="product-details.html">Womens High Hills</a></h4>
-                                            <div class="ratings">
-                                                <span><i class="fa fa-star"></i></span>
-                                                <span><i class="fa fa-star"></i></span>
-                                                <span><i class="fa fa-star"></i></span>
-                                                <span><i class="fa fa-star"></i></span>
-                                                <span><i class="fa fa-star"></i></span>
-                                            </div>
-                                            <div class="price-box">
-                                                <span class="price-regular">$60.00</span>
-                                            </div>
-                                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Unde perspiciatis
-                                                quod numquam, sit fugiat, deserunt ipsa mollitia sunt quam.
-                                            </p>
-                                            <a href="cart.html" class="btn btn-large hover-color">Add To Cart</a>
-                                        </div>
-                                    </div>
-                                    <!-- product list item end -->
-                                </div>
-                                <!-- product single item start -->
-
-                                <!-- product single item start -->
-                                <div class="col-lg-3 col-md-4 col-sm-6">
-                                    <!-- product grid start -->
-                                    <div class="product-item">
-                                        <div class="product-thumb">
-                                            <a href="product-details.html">
-                                                <img src="assets/img/product/product-10.jpg" alt="product thumb">
-                                            </a>
-                                            <div class="button-group">
-                                                <a href="wishlist.html" data-toggle="tooltip" title="Add to Wishlist"><i class="fa fa-heart-o"></i></a>
-                                                <a href="#" data-toggle="modal" data-target="#quick_view"><span data-toggle="tooltip"  title="Quick View"><i class="fa fa-eye"></i></span></a>
-                                            </div>
-                                            <div class="product-label">
-                                                <span>new</span>
-                                            </div>
-                                        </div>
-                                        <div class="product-content">
-                                            <div class="product-caption">
-                                                <h6 class="product-name">
-                                                    <a href="product-details.html">Quickiin Mens shoes</a>
-                                                </h6>
-                                                <div class="price-box">
-                                                    <span class="price-regular">$75.00</span>
-                                                </div>
-                                                <a class="add-to-cart" href="cart.html"><i class="fa fa-shopping-cart"></i></a>
-                                            </div>
-                                            <div class="ratings">
-                                                <span><i class="fa fa-star"></i></span>
-                                                <span><i class="fa fa-star"></i></span>
-                                                <span><i class="fa fa-star"></i></span>
-                                                <span><i class="fa fa-star"></i></span>
-                                                <span><i class="fa fa-star"></i></span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- product grid end -->
-
-                                    <!-- product list item end -->
-                                    <div class="product-list-item">
-                                        <div class="product-thumb">
-                                            <a href="product-details.html">
-                                                <img src="assets/img/product/product-10.jpg" alt="product thumb">
-                                            </a>
-                                            <div class="button-group">
-                                                <a href="wishlist.html" data-toggle="tooltip" title="Add to Wishlist"><i class="fa fa-heart-o"></i></a>
-                                                <a href="#" data-toggle="modal" data-target="#quick_view"><span data-toggle="tooltip"  title="Quick View"><i class="fa fa-eye"></i></span></a>
-                                            </div>
-                                            <div class="product-label">
-                                                <span>new</span>
-                                            </div>
-                                        </div>
-                                        <div class="product-content-list">
-                                            <h4 class="product-name"><a href="product-details.html">Quickiin Mens shoes</a></h4>
-                                            <div class="ratings">
-                                                <span><i class="fa fa-star"></i></span>
-                                                <span><i class="fa fa-star"></i></span>
-                                                <span><i class="fa fa-star"></i></span>
-                                                <span><i class="fa fa-star"></i></span>
-                                                <span><i class="fa fa-star"></i></span>
-                                            </div>
-                                            <div class="price-box">
-                                                <span class="price-regular">$55.00</span>
-                                            </div>
-                                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Unde perspiciatis
-                                                quod numquam, sit fugiat, deserunt ipsa mollitia sunt quam.
-                                            </p>
-                                            <a href="cart.html" class="btn btn-large hover-color">Add To Cart</a>
-                                        </div>
-                                    </div>
-                                    <!-- product list item end -->
-                                </div>
-                                <!-- product single item start -->
-
-                                <!-- product single item start -->
-                                <div class="col-lg-3 col-md-4 col-sm-6">
-                                    <!-- product grid start -->
-                                    <div class="product-item">
-                                        <div class="product-thumb">
-                                            <a href="product-details.html">
-                                                <img src="assets/img/product/product-3.jpg" alt="product thumb">
-                                            </a>
-                                            <div class="button-group">
-                                                <a href="wishlist.html" data-toggle="tooltip" title="Add to Wishlist"><i class="fa fa-heart-o"></i></a>
-                                                <a href="#" data-toggle="modal" data-target="#quick_view"><span data-toggle="tooltip"  title="Quick View"><i class="fa fa-eye"></i></span></a>
-                                            </div>
-                                            <div class="product-label">
-                                                <span>new</span>
-                                            </div>
-                                        </div>
-                                        <div class="product-content">
-                                            <div class="product-caption">
-                                                <h6 class="product-name">
-                                                    <a href="product-details.html">LEATHER MENS SLIPPERS</a>
-                                                </h6>
-                                                <div class="price-box">
-                                                    <span class="price-regular">$70.00</span>
-                                                </div>
-                                                <a class="add-to-cart" href="cart.html"><i class="fa fa-shopping-cart"></i></a>
-                                            </div>
-                                            <div class="ratings">
-                                                <span><i class="fa fa-star"></i></span>
-                                                <span><i class="fa fa-star"></i></span>
-                                                <span><i class="fa fa-star"></i></span>
-                                                <span><i class="fa fa-star"></i></span>
-                                                <span><i class="fa fa-star"></i></span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- product grid end -->
-
-                                    <!-- product list item end -->
-                                    <div class="product-list-item">
-                                        <div class="product-thumb">
-                                            <a href="product-details.html">
-                                                <img src="assets/img/product/product-3.jpg" alt="product thumb">
-                                            </a>
-                                            <div class="button-group">
-                                                <a href="wishlist.html" data-toggle="tooltip" title="Add to Wishlist"><i class="fa fa-heart-o"></i></a>
-                                                <a href="#" data-toggle="modal" data-target="#quick_view"><span data-toggle="tooltip"  title="Quick View"><i class="fa fa-eye"></i></span></a>
-                                            </div>
-                                            <div class="product-label">
-                                                <span>new</span>
-                                            </div>
-                                        </div>
-                                        <div class="product-content-list">
-                                            <h4 class="product-name"><a href="product-details.html">LEATHER MENS SLIPPERS</a></h4>
-                                            <div class="ratings">
-                                                <span><i class="fa fa-star"></i></span>
-                                                <span><i class="fa fa-star"></i></span>
-                                                <span><i class="fa fa-star"></i></span>
-                                                <span><i class="fa fa-star"></i></span>
-                                                <span><i class="fa fa-star"></i></span>
-                                            </div>
-                                            <div class="price-box">
-                                                <span class="price-regular">$50.00</span>
-                                            </div>
-                                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Unde perspiciatis
-                                                quod numquam, sit fugiat, deserunt ipsa mollitia sunt quam.
-                                            </p>
-                                            <a href="cart.html" class="btn btn-large hover-color">Add To Cart</a>
-                                        </div>
-                                    </div>
-                                    <!-- product list item end -->
-                                </div>
-                                <!-- product single item start -->
-
-                                <!-- product single item start -->
-                                <div class="col-lg-3 col-md-4 col-sm-6">
-                                    <!-- product grid start -->
-                                    <div class="product-item">
-                                        <div class="product-thumb">
-                                            <a href="product-details.html">
-                                                <img src="assets/img/product/product-2.jpg" alt="product thumb">
-                                            </a>
-                                            <div class="button-group">
-                                                <a href="wishlist.html" data-toggle="tooltip" title="Add to Wishlist"><i class="fa fa-heart-o"></i></a>
-                                                <a href="#" data-toggle="modal" data-target="#quick_view"><span data-toggle="tooltip"  title="Quick View"><i class="fa fa-eye"></i></span></a>
-                                            </div>
-                                            <div class="product-label">
-                                                <span>new</span>
-                                            </div>
-                                        </div>
-                                        <div class="product-content">
-                                            <div class="product-caption">
-                                                <h6 class="product-name">
-                                                    <a href="product-details.html">REXPO WOMENS SHOES</a>
-                                                </h6>
-                                                <div class="price-box">
-                                                    <span class="price-regular">$90.00</span>
-                                                </div>
-                                                <a class="add-to-cart" href="cart.html"><i class="fa fa-shopping-cart"></i></a>
-                                            </div>
-                                            <div class="ratings">
-                                                <span><i class="fa fa-star"></i></span>
-                                                <span><i class="fa fa-star"></i></span>
-                                                <span><i class="fa fa-star"></i></span>
-                                                <span><i class="fa fa-star"></i></span>
-                                                <span><i class="fa fa-star"></i></span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- product grid end -->
-
-                                    <!-- product list item end -->
-                                    <div class="product-list-item">
-                                        <div class="product-thumb">
-                                            <a href="product-details.html">
-                                                <img src="assets/img/product/product-2.jpg" alt="product thumb">
-                                            </a>
-                                            <div class="button-group">
-                                                <a href="wishlist.html" data-toggle="tooltip" title="Add to Wishlist"><i class="fa fa-heart-o"></i></a>
-                                                <a href="#" data-toggle="modal" data-target="#quick_view"><span data-toggle="tooltip"  title="Quick View"><i class="fa fa-eye"></i></span></a>
-                                            </div>
-                                            <div class="product-label">
-                                                <span>new</span>
-                                            </div>
-                                        </div>
-                                        <div class="product-content-list">
-                                            <h4 class="product-name"><a href="product-details.html">REXPO WOMENS SHOES</a></h4>
-                                            <div class="ratings">
-                                                <span><i class="fa fa-star"></i></span>
-                                                <span><i class="fa fa-star"></i></span>
-                                                <span><i class="fa fa-star"></i></span>
-                                                <span><i class="fa fa-star"></i></span>
-                                                <span><i class="fa fa-star"></i></span>
-                                            </div>
-                                            <div class="price-box">
-                                                <span class="price-regular">$90.00</span>
-                                            </div>
-                                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Unde perspiciatis
-                                                quod numquam, sit fugiat, deserunt ipsa mollitia sunt quam.
-                                            </p>
-                                            <a href="cart.html" class="btn btn-large hover-color">Add To Cart</a>
-                                        </div>
-                                    </div>
-                                    <!-- product list item end -->
-                                </div>
                                 <!-- product single item start -->
                             </div>
+                        {% endfor %}
                             <!-- product item list wrapper end -->
 
                             <!-- start pagination area -->
                             <div class="paginatoin-area text-center">
-                                <ul class="pagination-box">
-                                    <li><a class="previous" href="#"><i class="fa fa-angle-left"></i></a></li>
-                                    <li class="active"><a href="#">1</a></li>
-                                    <li><a href="#">2</a></li>
-                                    <li><a href="#">3</a></li>
-                                    <li><a class="next" href="#"><i class="fa fa-angle-right"></i></a></li>
-                                </ul>
+                                {% if skus_page.has_previous %}
+                    <a href="{% url 'shops:list' type.id skus_page.previous_page_number%}?sort={{ sort }}">上一页</a>
+                {% endif %}
+
+            {% for pageindex in skus_page.paginator.page_range %}
+                {% if pageindex == skus_page.number %}
+                    <a href="{% url 'shops:list' type.id pageindex %}?sort={{ sort }}" class="active">{{ pageindex }}</a>
+                {% else %}
+                    <a href="{% url 'shops:list' type.id pageindex %}?sort={{ sort }}">{{ pageindex }}</a>
+                {% endif %}
+            {% endfor %}
+                            {% if skus_page.has_next %}
+                <a href="{% url 'shops:list' type.id skus_page.next_page_number  %}?sort={{ sort }}">下一页</a>
+            {% endif %}
                             </div>
                             <!-- end pagination area -->
                         </div>
@@ -1607,7 +829,7 @@
                         <div class="address-block mt-30">
                             <div class="footer-logo">
                                 <a href="index.html">
-                                    <img src="assets/img/logo/logo.png" alt="Brand Logo">
+                                    <img src="{% static 'img/logo/logo.png' %}" alt="Brand Logo">
                                 </a>
                             </div>
                             <address class="address-info d-flex align-items-center">
@@ -1636,7 +858,7 @@
                 <div class="row">
                     <div class="col-12">
                         <div class="payment-method-list">
-                            <img src="assets/img/payment-2.png" alt="payment method">
+                            <img src="{% static 'img/payment-2.png' %}" alt="payment method">
                         </div>
                         <div class="footer-link">
                             <a href="#">SITE MAP</a>
@@ -1671,30 +893,30 @@
                             <div class="col-lg-5">
                                 <div class="product-large-slider">
                                     <div class="pro-large-img">
-                                        <img src="assets/img/product/product-details-img1.jpg" alt="product-details" />
+                                        <img src="{% static 'img/product/product-details-img1.jpg' %}" alt="product-details" />
                                     </div>
                                     <div class="pro-large-img">
-                                        <img src="assets/img/product/product-details-img2.jpg" alt="product-details" />
+                                        <img src="{% static 'img/product/product-details-img2.jpg' %}" alt="product-details" />
                                     </div>
                                     <div class="pro-large-img">
-                                        <img src="assets/img/product/product-details-img3.jpg" alt="product-details" />
+                                        <img src="{% static 'img/product/product-details-img3.jpg' %}" alt="product-details" />
                                     </div>
                                     <div class="pro-large-img">
-                                        <img src="assets/img/product/product-details-img4.jpg" alt="product-details" />
+                                        <img src="{% static 'img/product/product-details-img4.jpg' %}" alt="product-details" />
                                     </div>
                                 </div>
                                 <div class="pro-nav slick-row-10 slick-arrow-style">
                                     <div class="pro-nav-thumb">
-                                        <img src="assets/img/product/product-details-img1.jpg" alt="product-details" />
+                                        <img src="{% static 'img/product/product-details-img1.jpg' %}" alt="product-details" />
                                     </div>
                                     <div class="pro-nav-thumb">
-                                        <img src="assets/img/product/product-details-img2.jpg" alt="product-details" />
+                                        <img src="{% static 'img/product/product-details-img2.jpg' %}" alt="product-details" />
                                     </div>
                                     <div class="pro-nav-thumb">
-                                        <img src="assets/img/product/product-details-img3.jpg" alt="product-details" />
+                                        <img src="{% static 'img/product/product-details-img3.jpg' %}" alt="product-details" />
                                     </div>
                                     <div class="pro-nav-thumb">
-                                        <img src="assets/img/product/product-details-img4.jpg" alt="product-details" />
+                                        <img src="{% static 'img/product/product-details-img4.jpg' %}" alt="product-details" />
                                     </div>
                                 </div>
                             </div>
@@ -1754,37 +976,37 @@
 ============================================ -->
 
     <!-- Modernizer JS -->
-    <script src="assets/js/vendor/modernizr-3.6.0.min.js"></script>
+    <script src="{% static 'js/vendor/modernizr-3.6.0.min.js' %}"></script>
     <!-- jQuery JS -->
-    <script src="assets/js/vendor/jquery-3.3.1.min.js"></script>
+    <script src="{% static 'js/vendor/jquery-3.3.1.min.js' %}"></script>
     <!-- Popper JS -->
-    <script src="assets/js/vendor/popper.min.js"></script>
+    <script src="{% static 'js/vendor/popper.min.js' %}"></script>
     <!-- Bootstrap JS -->
-    <script src="assets/js/vendor/bootstrap.min.js"></script>
+    <script src="{% static 'js/vendor/bootstrap.min.js' %}"></script>
     <!-- slick Slider JS -->
-    <script src="assets/js/plugins/slick.min.js"></script>
+    <script src="{% static 'js/plugins/slick.min.js' %}"></script>
     <!-- Countdown JS -->
-    <script src="assets/js/plugins/countdown.min.js"></script>
+    <script src="{% static 'js/plugins/countdown.min.js' %}"></script>
     <!-- Nice Select JS -->
-    <script src="assets/js/plugins/nice-select.min.js"></script>
+    <script src="{% static 'js/plugins/nice-select.min.js' %}"></script>
     <!-- jquery UI JS -->
-    <script src="assets/js/plugins/jqueryui.min.js"></script>
+    <script src="{% static 'js/plugins/jqueryui.min.js' %}"></script>
     <!-- Image zoom JS -->
-    <script src="assets/js/plugins/image-zoom.min.js"></script>
+    <script src="{% static 'js/plugins/image-zoom.min.js' %}"></script>
     <!-- image loaded js -->
-    <script src="assets/js/plugins/imagesloaded.pkgd.min.js"></script>
+    <script src="{% static 'js/plugins/imagesloaded.pkgd.min.js' %}"></script>
     <!-- masonry  -->
-    <script src="assets/js/plugins/masonry.pkgd.min.js"></script>
+    <script src="{% static 'js/plugins/masonry.pkgd.min.js' %}"></script>
     <!-- mailchimp active js -->
-    <script src="assets/js/plugins/ajaxchimp.js"></script>
+    <script src="{% static 'js/plugins/ajaxchimp.js' %}"></script>
     <!-- contact form dynamic js -->
-    <script src="assets/js/plugins/ajax-mail.js"></script>
+    <script src="{% static 'js/plugins/ajax-mail.js' %}"></script>
     <!-- google map api -->
     <script src="http://ditu.google.cn/maps/api/js?key=AIzaSyCfmCVTjRI007pC1Yk2o2d_EhgkjTsFVN8"></script>
     <!-- google map active js -->
-    <script src="assets/js/plugins/google-map.js"></script>
+    <script src="{% static 'js/plugins/google-map.js' %}"></script>
     <!-- Main JS -->
-    <script src="assets/js/main.js"></script>
+    <script src="{% static 'js/main.js' %}"></script>
 </body>
 
 </html>

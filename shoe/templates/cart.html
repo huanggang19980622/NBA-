@@ -1,4 +1,5 @@
-﻿<!doctype html>
+﻿{% load staticfiles %}
+<!doctype html>
 <html class="no-js" lang="en">
 
 <head>
@@ -9,26 +10,26 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <!-- Favicon -->
-    <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.ico">
+    <link rel="shortcut icon" type="image/x-icon" href="{% static 'img/favicon.ico'%}">
 
     <!-- CSS
 	============================================ -->
     <!-- google fonts -->
     <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:300,300i,400,400i,600,700,800,900%7CPoppins:300,400,500,600,700,800,900" rel="stylesheet">
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="assets/css/vendor/bootstrap.min.css">
+    <link rel="stylesheet" href="{% static 'css/vendor/bootstrap.min.css'%}">
     <!-- Font-awesome CSS -->
-    <link rel="stylesheet" href="assets/css/vendor/font-awesome.min.css">
+    <link rel="stylesheet" href="{% static 'css/vendor/font-awesome.min.css'%}">
     <!-- Slick slider css -->
-    <link rel="stylesheet" href="assets/css/plugins/slick.min.css">
+    <link rel="stylesheet" href="{% static 'css/plugins/slick.min.css'%}">
     <!-- animate css -->
-    <link rel="stylesheet" href="assets/css/plugins/animate.css">
+    <link rel="stylesheet" href="{% static 'css/plugins/animate.css'%}">
     <!-- Nice Select css -->
-    <link rel="stylesheet" href="assets/css/plugins/nice-select.css">
+    <link rel="stylesheet" href="{% static 'css/plugins/nice-select.css'%}">
     <!-- jquery UI css -->
-    <link rel="stylesheet" href="assets/css/plugins/jqueryui.min.css">
+    <link rel="stylesheet" href="{% static 'css/plugins/jqueryui.min.css'%}">
     <!-- main style css -->
-    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="{% static 'css/style.css'%}">
 
 </head>
 
@@ -45,11 +46,11 @@
                             <div class="top-left-navigation">
                                 <ul class="nav align-items-center">
                                     <li class="language">
-                                        <img src="assets/img/icon/en.png" alt="flag"> ENGLISH
+                                        <img src="{% static 'img/icon/en.png'%}" alt="flag"> ENGLISH
                                         <i class="fa fa-angle-down"></i>
                                         <ul class="dropdown-list">
-                                            <li><a href="#"><img src="assets/img/icon/en.png" alt="flag"> English</a></li>
-                                            <li><a href="#"><img src="assets/img/icon/fr.png" alt="flag"> French</a></li>
+                                            <li><a href="#"><img src="{% static 'img/icon/en.png'%}" alt="flag"> English</a></li>
+                                            <li><a href="#"><img src="{% static 'img/icon/fr.png'%}" alt="flag"> French</a></li>
                                         </ul>
                                     </li>
                                     <li class="curreny-wrap">
@@ -71,7 +72,7 @@
                                 <a href="#"><i class="fa fa-pinterest"></i></a>
                             </div>
                             <ul class="user-info-block">
-                                <li><a href="my-account.html"><i class="fa fa-user-circle"></i> My Account</a></li>
+                                <li><a href="uc_base.html"><i class="fa fa-user-circle"></i> My Account</a></li>
                                 <li><a href="checkout.html"><i class="fa fa-credit-card"></i> Checkout</a></li>
                                 <li><a href="login-register.html"><i class="fa fa-sign-in"></i> Sign In</a></li>
                             </ul>
@@ -79,6 +80,15 @@
                     </div>
                 </div>
             </div>
+            <div class="paginatoin-area text-center">
+                                <ul class="pagination-box">
+                                    <li><a class="previous" href="#"><i class="fa fa-angle-left"></i></a></li>
+                                    <li class="active"><a href="#">1</a></li>
+                                    <li><a href="#">2</a></li>
+                                    <li><a href="#">3</a></li>
+                                    <li><a class="next" href="#"><i class="fa fa-angle-right"></i></a></li>
+                                </ul>
+                            </div>
             <!-- header top end -->
 
             <!-- header middle area start -->
@@ -89,7 +99,7 @@
                         <div class="col-auto">
                             <div class="logo">
                                 <a href="index.html">
-                                    <img src="assets/img/logo/logo.png" alt="Brand Logo">
+                                    <img src="{% static 'img/logo/logo.png'%}" alt="Brand Logo">
                                 </a>
                             </div>
                         </div>
@@ -145,7 +155,7 @@
                                                     </li>
                                                     <li class="mega-title"><span>column 04</span>
                                                         <ul>
-                                                            <li><a href="my-account.html">my-account</a></li>
+                                                            <li><a href="uc_base.html">my-account</a></li>
                                                             <li><a href="login-register.html">login-register</a></li>
                                                             <li><a href="about-us.html">about us</a></li>
                                                             <li><a href="contact-us.html">contact us</a></li>
@@ -220,7 +230,7 @@
                                                 <ul class="cart-list">
                                                     <li>
                                                         <div class="cart-img">
-                                                            <a href="product-details.html"><img src="assets/img/cart/cart-1.jpg" alt=""></a>
+                                                            <a href="product-details.html"><img src="{% static 'img/cart/cart-1.jpg'%}" alt=""></a>
                                                         </div>
                                                         <div class="cart-info">
                                                             <h6 class="product-name"><a href="product-details.html">7th Generation classic</a></h6>
@@ -233,7 +243,7 @@
                                                     </li>
                                                     <li>
                                                         <div class="cart-img">
-                                                            <a href="product-details.html"><img src="assets/img/cart/cart-2.jpg" alt=""></a>
+                                                            <a href="product-details.html"><img src="{% static 'img/cart/cart-2.jpg'%}" alt=""></a>
                                                         </div>
                                                         <div class="cart-info">
                                                             <h6 class="product-name"><a href="product-details.html">Digital 8th generation</a></h6>
@@ -292,7 +302,7 @@
                         <div class="mobile-main-header">
                             <div class="mobile-logo">
                                 <a href="index.html">
-                                    <img src="assets/img/logo/logo.png" alt="Brand Logo">
+                                    <img src="{% static 'img/logo/logo.png'%}" alt="Brand Logo">
                                 </a>
                             </div>
                             <div class="mobile-menu-toggler">
@@ -385,7 +395,7 @@
                                         </li>
                                         <li class="mega-title menu-item-has-children"><a href="#">column 04</a>
                                             <ul class="dropdown">
-                                                <li><a href="my-account.html">my-account</a></li>
+                                                <li><a href="uc_base.html">my-account</a></li>
                                                 <li><a href="login-register.html">login-register</a></li>
                                                 <li><a href="about-us.html">about us</a></li>
                                                 <li><a href="contact-us.html">contact us</a></li>
@@ -462,7 +472,7 @@
                                         <i class="fa fa-angle-down"></i>
                                     </a>
                                     <div class="dropdown-menu" aria-labelledby="myaccount">
-                                        <a class="dropdown-item" href="my-account.html">my account</a>
+                                        <a class="dropdown-item" href="uc_base.html">my account</a>
                                         <a class="dropdown-item" href="login-register.html"> login</a>
                                         <a class="dropdown-item" href="login-register.html">register</a>
                                     </div>
@@ -521,7 +531,7 @@
 
     <main>
         <!-- breadcrumb area start -->
-        <div class="breadcrumb-area breadcrumb-img bg-img" data-bg="assets/img/banner/shop.jpg">
+        <div class="breadcrumb-area breadcrumb-img bg-img" data-bg="{% static 'img/banner/shop.jpg'%}">
             <div class="container">
                 <div class="row">
                     <div class="col-12">
@@ -562,7 +572,7 @@
                                     </thead>
                                     <tbody>
                                         <tr>
-                                            <td class="pro-thumbnail"><a href="#"><img class="img-fluid" src="assets/img/product/product-1.jpg" alt="Product" /></a></td>
+                                            <td class="pro-thumbnail"><a href="#"><img class="img-fluid" src="{% static 'img/product/product-1.jpg'%}" alt="Product" /></a></td>
                                             <td class="pro-title"><a href="#">PRIMITIVE MENS SHOES</a></td>
                                             <td class="pro-price"><span>$295.00</span></td>
                                             <td class="pro-quantity">
@@ -572,7 +582,7 @@
                                             <td class="pro-remove"><a href="#"><i class="fa fa-trash-o"></i></a></td>
                                         </tr>
                                         <tr>
-                                            <td class="pro-thumbnail"><a href="#"><img class="img-fluid" src="assets/img/product/product-2.jpg" alt="Product" /></a></td>
+                                            <td class="pro-thumbnail"><a href="#"><img class="img-fluid" src="{% static 'img/product/product-2.jpg'%}" alt="Product" /></a></td>
                                             <td class="pro-title"><a href="#">LEATHER MENS SLIPPERS</a></td>
                                             <td class="pro-price"><span>$275.00</span></td>
                                             <td class="pro-quantity">
@@ -582,7 +592,7 @@
                                             <td class="pro-remove"><a href="#"><i class="fa fa-trash-o"></i></a></td>
                                         </tr>
                                         <tr>
-                                            <td class="pro-thumbnail"><a href="#"><img class="img-fluid" src="assets/img/product/product-3.jpg" alt="Product" /></a></td>
+                                            <td class="pro-thumbnail"><a href="#"><img class="img-fluid" src="{% static 'img/product/product-3.jpg'%}" alt="Product" /></a></td>
                                             <td class="pro-title"><a href="#">REXPO WOMENS SHOES</a></td>
                                             <td class="pro-price"><span>$295.00</span></td>
                                             <td class="pro-quantity">
@@ -594,7 +604,7 @@
                                             <td class="pro-remove"><a href="#"><i class="fa fa-trash-o"></i></a></td>
                                         </tr>
                                         <tr>
-                                            <td class="pro-thumbnail"><a href="#"><img class="img-fluid" src="assets/img/product/product-4.jpg" alt="Product" /></a></td>
+                                            <td class="pro-thumbnail"><a href="#"><img class="img-fluid" src="{% static 'img/product/product-4.jpg'%}" alt="Product" /></a></td>
                                             <td class="pro-title"><a href="#">QUICKIIN MENS SHOES</a></td>
                                             <td class="pro-price"><span>$110.00</span></td>
                                             <td class="pro-quantity">
@@ -754,7 +764,7 @@
                         <div class="address-block mt-30">
                             <div class="footer-logo">
                                 <a href="index.html">
-                                    <img src="assets/img/logo/logo.png" alt="Brand Logo">
+                                    <img src="{% static 'img/logo/logo.png'%}" alt="Brand Logo">
                                 </a>
                             </div>
                             <address class="address-info d-flex align-items-center">
@@ -783,7 +793,7 @@
                 <div class="row">
                     <div class="col-12">
                         <div class="payment-method-list">
-                            <img src="assets/img/payment-2.png" alt="payment method">
+                            <img src="{% static 'img/payment-2.png'%}" alt="payment method">
                         </div>
                         <div class="footer-link">
                             <a href="#">SITE MAP</a>
@@ -808,37 +818,37 @@
 ============================================ -->
 
     <!-- Modernizer JS -->
-    <script src="assets/js/vendor/modernizr-3.6.0.min.js"></script>
+    <script src="{% static 'js/vendor/modernizr-3.6.0.min.js'%}"></script>
     <!-- jQuery JS -->
-    <script src="assets/js/vendor/jquery-3.3.1.min.js"></script>
+    <script src="{% static 'js/vendor/jquery-3.3.1.min.js'%}"></script>
     <!-- Popper JS -->
-    <script src="assets/js/vendor/popper.min.js"></script>
+    <script src="{% static 'js/vendor/popper.min.js'%}"></script>
     <!-- Bootstrap JS -->
-    <script src="assets/js/vendor/bootstrap.min.js"></script>
+    <script src="{% static 'js/vendor/bootstrap.min.js'%}"></script>
     <!-- slick Slider JS -->
-    <script src="assets/js/plugins/slick.min.js"></script>
+    <script src="{% static 'js/plugins/slick.min.js'%}"></script>
     <!-- Countdown JS -->
-    <script src="assets/js/plugins/countdown.min.js"></script>
+    <script src="{% static 'js/plugins/countdown.min.js'%}"></script>
     <!-- Nice Select JS -->
-    <script src="assets/js/plugins/nice-select.min.js"></script>
+    <script src="{% static 'js/plugins/nice-select.min.js'%}"></script>
     <!-- jquery UI JS -->
-    <script src="assets/js/plugins/jqueryui.min.js"></script>
+    <script src="{% static 'js/plugins/jqueryui.min.js'%}"></script>
     <!-- Image zoom JS -->
-    <script src="assets/js/plugins/image-zoom.min.js"></script>
+    <script src="{% static 'js/plugins/image-zoom.min.js'%}"></script>
     <!-- image loaded js -->
-    <script src="assets/js/plugins/imagesloaded.pkgd.min.js"></script>
+    <script src="{% static 'js/plugins/imagesloaded.pkgd.min.js'%}"></script>
     <!-- masonry  -->
-    <script src="assets/js/plugins/masonry.pkgd.min.js"></script>
+    <script src="{% static 'js/plugins/masonry.pkgd.min.js'%}"></script>
     <!-- mailchimp active js -->
-    <script src="assets/js/plugins/ajaxchimp.js"></script>
+    <script src="{% static 'js/plugins/ajaxchimp.js'%}"></script>
     <!-- contact form dynamic js -->
-    <script src="assets/js/plugins/ajax-mail.js"></script>
+    <script src="{% static 'js/plugins/ajax-mail.js'%}"></script>
     <!-- google map api -->
     <script src="http://ditu.google.cn/maps/api/js?key=AIzaSyCfmCVTjRI007pC1Yk2o2d_EhgkjTsFVN8"></script>
     <!-- google map active js -->
-    <script src="assets/js/plugins/google-map.js"></script>
+    <script src="{% static 'js/plugins/google-map.js'%}"></script>
     <!-- Main JS -->
-    <script src="assets/js/main.js"></script>
+    <script src="{% static 'js/main.js'%}"></script>
 </body>
 
 </html>

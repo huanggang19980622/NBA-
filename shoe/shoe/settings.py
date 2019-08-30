@@ -27,7 +27,8 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
-
+# 真实路径为：MEDIA_URL+CKEDITOR_UPLOAD_PATH(MEDIA_ROOT/CKEDITOR_UPLOAD_PATH)
+CKEDITOR_UPLOAD_PATH = "ckeditor_upload"
 # Application definition
 
 INSTALLED_APPS = [
@@ -37,14 +38,34 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'apps.CONTACTUS',
+    'apps.Apis',
     'apps.Home',
-    'apps.SHOP',
+    'apps.shops',
     'apps.PAGES',
-    'apps.BLOG'
+    'apps.Usercenter',
+    'easy_thumbnails',
+    'haystack',
+
+
+    'ckeditor',
+    'ckeditor_uploader',
+
 
 
 ]
+THUMBNAIL_ALIASES = {
+    # target: 'accounts.User' => 给哪个app/Model/Field配置缩略图
+    '': {
+        # avatar: 表示将来引用的名字
+        # crop: False=> 不裁剪、同比例缩小
+        'avatar': {'size': (50, 50), 'crop': True},
+    },
+
+    # 'accounts': {
+    #     'xs': {'size': (30, 30), 'crop': True},
+    #     'xs_nocorp': {'size': (30, 30), 'crop': False},
+    # },
+}
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -55,13 +76,28 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+if not os.path.exists(MEDIA_ROOT):
+    os.mkdir(MEDIA_ROOT)
+MEDIA_URL = '/media/'
 
 
 
+CKEDITOR_CONFIGS = {
+    'awesome_ckeditor': {
+        'toolbar': 'Basic',
+    },
+    'default_ckeditor':{
+        'toolbar': 'Full',
+    },
+    'default': {
+        'toolbar': 'Full',
+    },
+}
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(BASE_DIR,"templates")],
+        'DIRS': [os.path.join(BASE_DIR, 'templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -69,11 +105,16 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                # 添加这一行
+                'shoe.context_processors.site_info',
+
             ],
         },
     },
 ]
-
+SITE_NAME = '题库系统'
+SITE_DESC = '人生苦短，我用Python'
+SITE_KEYWORDS = 'python, django, flask'
 
 
 
@@ -148,3 +189,40 @@ STATICFILES_DIRS=[
     os.path.join(BASE_DIR,"static")
 ]
 FontPath = os.path.join(BASE_DIR, 'static/fonts/')
+WECHAT = [
+    {
+        'appid':'demo',
+        'appsecret': 'demo',
+        'token': 'demo',
+        'mch_id': 'demo',
+        'key': 'demo',
+        'body': 'demo',
+    },
+]
+DEFAULT_FROM_EMAIL = '471958975@qq.com'
+
+# 163邮箱SMTP服务器地址
+EMAIL_HOST = 'smtp.qq.com'
+# 发件人的邮箱
+EMAIL_HOST_USER = '471958975@qq.com'
+# 发件人邮箱密码
+EMAIL_HOST_PASSWORD = 'hftpbwtsxhlecafb'
+# tls协议，有True和False两种情况
+EMAIL_USE_TLS = True
+# 发件人的邮箱
+EMAIL_FROM = '471958975@qq.com'
+
+HAYSTACK_CONNECTIONS = {
+    'default': {
+        # 使用whoosh引擎
+        # 'ENGINE': 'haystack.backends.whoosh_backend.WhooshEngine',
+        'ENGINE': 'haystack.backends.whoosh_backend.WhooshEngine',
+        # 索引文件路径
+        'PATH': os.path.join(os.path.dirname(__file__), 'whoosh_index'),
+    },
+}
+
+# 当添加、修改、删除数据时，自动生成索引
+HAYSTACK_SIGNAL_PROCESSOR = 'haystack.signals.RealtimeSignalProcessor'
+
+# HAYSTACK_SEARCH_RESULTS_PER_PAGE = 6

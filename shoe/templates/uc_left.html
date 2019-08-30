@@ -1,0 +1,15 @@
+<div class="panel">
+    <div class="panel-body">
+      <ul class="nav nav-pills nav-stacked">
+      {% url 'uc:profile' as uc_profile %}
+      {% url 'uc:change_passwd' as uc_change_passwd %}
+      {% url 'uc:answer' as uc_answer %}
+      {% url 'uc:collect' as uc_collect %}
+      {% url 'uc:contribut' as uc_contribut %}
+      {% url 'uc:approval' as uc_approval %}
+      <li role="presentation" class="{% if request.path == uc_profile %}active{% endif %}"><a href="{{ uc_profile }}">个人资料</a></li>
+      <li role="presentation" class="{% if request.path == uc_change_passwd %}active{% endif %}"><a href="{{ uc_change_passwd }}">修改密码</a></li>
+
+      </ul>
+    </div>
+  </div>

@@ -83,7 +83,7 @@
                                 <a href="#"><i class="fa fa-pinterest"></i></a>
                             </div>
                             <ul class="user-info-block">
-                                <li><a href="my-account.html"><i class="fa fa-user-circle"></i> My Account</a></li>
+                                <li><a href="uc_base.html"><i class="fa fa-user-circle"></i> My Account</a></li>
                                 <li><a href="checkout.html"><i class="fa fa-credit-card"></i> Checkout</a></li>
                                 <li><a href="{% url 'Home:login' %}"><i class="fa fa-sign-in"></i> Sign In</a></li>
                             </ul>
@@ -116,11 +116,11 @@
                                         <ul>
                                             <li class="active"><a href="index.html">Home <i class="fa fa-angle-down"></i></a>
                                                 <ul class="dropdown">
-                                                    <li><a href="index.html">Home version 01</a></li>
-                                                    <li><a href="index-2.html">Home version 02</a></li>
-                                                    <li><a href="index-3.html">Home version 03</a></li>
-                                                    <li><a href="index-4.html">Home version 04</a></li>
-                                                    <li><a href="index-5.html">Home version 05</a></li>
+                                                   <li><a href="{% url 'Home:index1' %}">Home version 01</a></li>
+                                                    <li><a href="{% url 'Home:index2' %}">Home version 02</a></li>
+                                                    <li><a href="{% url 'Home:index3' %}">Home version 03</a></li>
+                                                    <li><a href="{% url 'Home:index4' %}">Home version 04</a></li>
+                                                    <li><a href="{% url 'Home:index5' %}">Home version 05</a></li>
                                                 </ul>
                                             </li>
                                             <li class="position-static"><a href="#">pages <i class="fa fa-angle-down"></i></a>
@@ -157,7 +157,7 @@
                                                     </li>
                                                     <li class="mega-title"><span>column 04</span>
                                                         <ul>
-                                                            <li><a href="my-account.html">my-account</a></li>
+                                                            <li><a href="uc_base.html">my-account</a></li>
                                                             <li><a href="login-register.html">login-register</a></li>
                                                             <li><a href="base.html">about us</a></li>
                                                             <li><a href="contact-us.html">contact us</a></li>
@@ -397,7 +397,7 @@
                                         </li>
                                         <li class="mega-title menu-item-has-children"><a href="#">column 04</a>
                                             <ul class="dropdown">
-                                                <li><a href="my-account.html">my-account</a></li>
+                                                <li><a href="uc_base.html">my-account</a></li>
                                                 <li><a href="login-register.html">login-register</a></li>
                                                 <li><a href="base.html">about us</a></li>
                                                 <li><a href="contact-us.html">contact us</a></li>
@@ -474,7 +474,7 @@
                                         <i class="fa fa-angle-down"></i>
                                     </a>
                                     <div class="dropdown-menu" aria-labelledby="myaccount">
-                                        <a class="dropdown-item" href="my-account.html">my account</a>
+                                        <a class="dropdown-item" href="uc_base.html">my account</a>
                                         <a class="dropdown-item" href="login-register.html"> login</a>
                                         <a class="dropdown-item" href="login-register.html">register</a>
                                     </div>
